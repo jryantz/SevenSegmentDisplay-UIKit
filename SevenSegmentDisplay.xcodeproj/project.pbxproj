@@ -18,6 +18,7 @@
 		FBDB1A3F277BF42B00D902EB /* SevenSegmentNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB1A3E277BF42B00D902EB /* SevenSegmentNumber.swift */; };
 		FBDB1A41277BF43500D902EB /* SevenSegmentDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB1A40277BF43500D902EB /* SevenSegmentDisplay.swift */; };
 		FBDB1A43277BF61400D902EB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBDB1A42277BF61400D902EB /* Colors.xcassets */; };
+		FBDB1A46277BF7DB00D902EB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FBDB1A45277BF7DB00D902EB /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		FBDB1A3E277BF42B00D902EB /* SevenSegmentNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenSegmentNumber.swift; sourceTree = "<group>"; };
 		FBDB1A40277BF43500D902EB /* SevenSegmentDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenSegmentDisplay.swift; sourceTree = "<group>"; };
 		FBDB1A42277BF61400D902EB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		FBDB1A45277BF7DB00D902EB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FBDB1A47277BF7F100D902EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				FBDB1A22277BF39D00D902EB /* SevenSegmentDisplay */,
+				FBDB1A47277BF7F100D902EB /* README.md */,
+				FBDB1A45277BF7DB00D902EB /* .gitignore */,
 				FBDB1A21277BF39D00D902EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDB1A46277BF7DB00D902EB /* .gitignore in Resources */,
 				FBDB1A30277BF39E00D902EB /* LaunchScreen.storyboard in Resources */,
 				FBDB1A43277BF61400D902EB /* Colors.xcassets in Resources */,
 				FBDB1A2D277BF39E00D902EB /* Assets.xcassets in Resources */,
