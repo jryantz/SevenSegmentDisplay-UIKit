@@ -7,16 +7,25 @@
 
 import UIKit
 
-class SevenSegmentDisplay: BaseView {
+class SevenSegmentDisplay: UIView {
     
     fileprivate let hundreds: SevenSegmentNumber = SevenSegmentNumber()
     fileprivate let tens: SevenSegmentNumber = SevenSegmentNumber()
     fileprivate let ones: SevenSegmentNumber = SevenSegmentNumber()
     
-    override func setupViews() {
+    override init(frame: CGRect) {
         
-        super.setupViews()
+        super.init(frame: frame)
+        setupViews()
         
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupViews() {
+                
         addSubview(tens)
         tens.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         tens.topAnchor.constraint(equalTo: topAnchor).isActive = true
