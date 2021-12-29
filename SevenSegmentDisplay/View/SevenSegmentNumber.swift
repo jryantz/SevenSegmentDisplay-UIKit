@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SevenSegmentNumber: BaseView {
+class SevenSegmentNumber: UIView {
     
     fileprivate let a: Segment = Segment()
     fileprivate let b: Segment = Segment()
@@ -17,9 +17,18 @@ class SevenSegmentNumber: BaseView {
     fileprivate let f: Segment = Segment()
     fileprivate let g: Segment = Segment()
     
-    override func setupViews() {
+    override init(frame: CGRect) {
         
-        super.setupViews()
+        super.init(frame: frame)
+        setupViews()
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupViews() {
         
         let thickness: CGFloat = 7
         
