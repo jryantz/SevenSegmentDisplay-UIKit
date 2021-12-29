@@ -34,52 +34,66 @@ class SevenSegmentNumber: UIView {
         
         // Top
         addSubview(a)
-        a.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        a.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6).isActive = true
-        a.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6).isActive = true
-        a.heightAnchor.constraint(equalToConstant: thickness).isActive = true
+        NSLayoutConstraint.activate([
+            a.topAnchor.constraint(equalTo: topAnchor),
+            a.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6),
+            a.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6),
+            a.heightAnchor.constraint(equalToConstant: thickness)
+        ])
         
         // Top Right
         addSubview(b)
-        b.topAnchor.constraint(equalTo: topAnchor, constant: 4).isActive = true
-        b.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        b.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1/2, constant: -4).isActive = true
-        b.widthAnchor.constraint(equalToConstant: thickness).isActive = true
+        NSLayoutConstraint.activate([
+            b.topAnchor.constraint(equalTo: topAnchor, constant: 4),
+            b.trailingAnchor.constraint(equalTo: trailingAnchor),
+            b.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1/2, constant: -4),
+            b.widthAnchor.constraint(equalToConstant: thickness)
+        ])
         
         // Bottom Right
         addSubview(c)
-        c.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4).isActive = true
-        c.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        c.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1/2, constant: -4).isActive = true
-        c.widthAnchor.constraint(equalToConstant: thickness).isActive = true
+        NSLayoutConstraint.activate([
+            c.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
+            c.trailingAnchor.constraint(equalTo: trailingAnchor),
+            c.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1/2, constant: -4),
+            c.widthAnchor.constraint(equalToConstant: thickness)
+        ])
         
         // Bottom
         addSubview(d)
-        d.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        d.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6).isActive = true
-        d.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6).isActive = true
-        d.heightAnchor.constraint(equalToConstant: thickness).isActive = true
+        NSLayoutConstraint.activate([
+            d.bottomAnchor.constraint(equalTo: bottomAnchor),
+            d.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6),
+            d.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6),
+            d.heightAnchor.constraint(equalToConstant: thickness)
+        ])
         
         // Bottom Left
         addSubview(e)
-        e.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4).isActive = true
-        e.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        e.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1/2, constant: -4).isActive = true
-        e.widthAnchor.constraint(equalToConstant: thickness).isActive = true
+        NSLayoutConstraint.activate([
+            e.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
+            e.leadingAnchor.constraint(equalTo: leadingAnchor),
+            e.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1/2, constant: -4),
+            e.widthAnchor.constraint(equalToConstant: thickness)
+        ])
         
         // Top Left
         addSubview(f)
-        f.topAnchor.constraint(equalTo: topAnchor, constant: 4).isActive = true
-        f.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        f.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1/2, constant: -4).isActive = true
-        f.widthAnchor.constraint(equalToConstant: thickness).isActive = true
+        NSLayoutConstraint.activate([
+            f.topAnchor.constraint(equalTo: topAnchor, constant: 4),
+            f.leadingAnchor.constraint(equalTo: leadingAnchor),
+            f.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1/2, constant: -4),
+            f.widthAnchor.constraint(equalToConstant: thickness)
+        ])
         
         // Middle
         addSubview(g)
-        g.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        g.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6).isActive = true
-        g.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6).isActive = true
-        g.heightAnchor.constraint(equalToConstant: thickness).isActive = true
+        NSLayoutConstraint.activate([
+            g.centerYAnchor.constraint(equalTo: centerYAnchor),
+            g.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6),
+            g.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6),
+            g.heightAnchor.constraint(equalToConstant: thickness)
+        ])
         
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -91,28 +105,17 @@ class SevenSegmentNumber: UIView {
         
         reset()
         switch value {
-        case 0:
-            zero()
-        case 1:
-            one()
-        case 2:
-            two()
-        case 3:
-            three()
-        case 4:
-            four()
-        case 5:
-            five()
-        case 6:
-            six()
-        case 7:
-            seven()
-        case 8:
-            eight()
-        case 9:
-            nine()
-        default:
-            break
+        case 0: zero()
+        case 1: one()
+        case 2: two()
+        case 3: three()
+        case 4: four()
+        case 5: five()
+        case 6: six()
+        case 7: seven()
+        case 8: eight()
+        case 9: nine()
+        default: break
         }
         
     }
