@@ -25,25 +25,26 @@ class SevenSegmentDisplay: UIView {
     }
     
     func setupViews() {
-                
-        addSubview(tens)
-        tens.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        tens.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        tens.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        tens.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3, constant: -8).isActive = true
         
         addSubview(hundreds)
-        hundreds.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        hundreds.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        hundreds.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        hundreds.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3, constant: -8).isActive = true
-        
+        addSubview(tens)
         addSubview(ones)
-        ones.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        ones.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        ones.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        ones.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3, constant: -8).isActive = true
         
+        NSLayoutConstraint.activate([
+            hundreds.leadingAnchor.constraint(equalTo: leadingAnchor),
+            hundreds.topAnchor.constraint(equalTo: topAnchor),
+            hundreds.bottomAnchor.constraint(equalTo: bottomAnchor),
+            hundreds.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3, constant: -8),
+            tens.centerXAnchor.constraint(equalTo: centerXAnchor),
+            tens.topAnchor.constraint(equalTo: topAnchor),
+            tens.bottomAnchor.constraint(equalTo: bottomAnchor),
+            tens.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3, constant: -8),
+            ones.trailingAnchor.constraint(equalTo: trailingAnchor),
+            ones.topAnchor.constraint(equalTo: topAnchor),
+            ones.bottomAnchor.constraint(equalTo: bottomAnchor),
+            ones.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3, constant: -8)
+        ])
+                
     }
     
     /// Sets the display to the given number.
