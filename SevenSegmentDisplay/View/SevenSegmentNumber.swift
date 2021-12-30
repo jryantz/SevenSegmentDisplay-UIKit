@@ -9,13 +9,13 @@ import UIKit
 
 class SevenSegmentNumber: UIView {
     
-    fileprivate let a: Segment = Segment()
-    fileprivate let b: Segment = Segment()
-    fileprivate let c: Segment = Segment()
-    fileprivate let d: Segment = Segment()
-    fileprivate let e: Segment = Segment()
-    fileprivate let f: Segment = Segment()
-    fileprivate let g: Segment = Segment()
+    private let a: Segment = Segment()
+    private let b: Segment = Segment()
+    private let c: Segment = Segment()
+    private let d: Segment = Segment()
+    private let e: Segment = Segment()
+    private let f: Segment = Segment()
+    private let g: Segment = Segment()
     
     override init(frame: CGRect) {
         
@@ -207,26 +207,6 @@ class SevenSegmentNumber: UIView {
         d.backgroundColor = UIColor(named: "displayOn")
         f.backgroundColor = UIColor(named: "displayOn")
         g.backgroundColor = UIColor(named: "displayOn")
-    }
-    
-}
-
-fileprivate class Segment: UIView {
-    
-    override init(frame: CGRect) {
-        
-        super.init(frame: frame)
-        
-        backgroundColor = UIColor(named: "displayOff")
-        roundCorners(.all, radius: 8)
-        translatesAutoresizingMaskIntoConstraints = false
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        
-        fatalError("init(coder:) has not been implemented")
-        
     }
     
 }
